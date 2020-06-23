@@ -1,8 +1,7 @@
 # cLyapunovExponent
 A C++ library to calculate Lyapunov Spectrum of a Dynamical System using Gram-Schmidt Procedure.
 
-## Author & Contact 
-Dhrubajyoti Biswas, Contact: <dhrubajyoti98@gmail.com>
+Details of the numerical method used can be found in the book: *Practical Numerical Algorithms for Chaotic Systems* by *Parker and Chua*, Chapter 3. See <https://www.springer.com/gp/book/9781461281214>.
 
 ## Dependencies
 This library uses the GNU Scientific Library (GSL), specifically the vector implementation found in gsl_vector.h. Therefore, this has to be installed before using this library. 
@@ -28,3 +27,6 @@ This library uses the GNU Scientific Library (GSL), specifically the vector impl
 4. run './test'
 5. You should get two numbers on as your output on your display as follows:
     >0.60 -2.34
+    
+## Author & Contact 
+Dhrubajyoti Biswas, Contact: <dhrubajyoti98@gmail.com>
