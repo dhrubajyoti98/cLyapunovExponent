@@ -11,6 +11,7 @@ This library uses the GNU Scientific Library (GSL), specifically the vector impl
 ## Usage
 
 * ### To build the library: 
+0. Please go through the sample code provided to learn how to use the library before proceeding.
 1. git clone this repository.
 2. go to the folder 'src'.
 3. run 'make'.
