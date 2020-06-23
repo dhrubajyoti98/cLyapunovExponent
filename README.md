@@ -21,7 +21,7 @@ Make sure you have the GSL Library installed and configured.
 
    >**g++ -o logistic logistic.cpp -lm -lgsl -lgslcblas -L . -lLyaExp**
    
-* ### To test using sample code provided (Find Lyapunov Spectrum of Henon Map):
+* ### To test using sample code provided (Lyapunov Spectrum of Henon Map):
 1. git clone this repository
 2. go to the folder 'sample'
 3. run 'make'
