@@ -2,22 +2,14 @@
 #include<cmath>
 #include<cstdio>
 #include<gsl/gsl_vector.h>
+#include "lyaExp.hpp"
 
-class lyaExp
-{
-    private:
 
-    //timeStep= timestep value for ODE mode only, default 1.0
-    //dim=dimension of the original system
-    //mode=1 means map, mode=2 means ODE.
-    int dim; 
-    int mode; 
-    int stepCounter;
-    double timeStep; 
-    double *LE;
 
     
-    gsl_vector* scale_vector(gsl_vector *v, double factor)
+
+    
+    gsl_vector* lyaExp::scale_vector(gsl_vector *v, double factor)
     {
         gsl_vector* tmp=gsl_vector_calloc(dim);
         double val=0;
@@ -28,7 +20,7 @@ class lyaExp
         }
         return tmp;
     }
-    gsl_vector* div_vector(gsl_vector *v, double factor)
+    gsl_vector* lyaExp::div_vector(gsl_vector *v, double factor)
     {
         gsl_vector* tmp=gsl_vector_calloc(dim);
         double val=0;
@@ -39,9 +31,7 @@ class lyaExp
         }
         return tmp;
     }
-
-    public:
-    double vector_mod(gsl_vector *a)
+    double lyaExp::vector_mod(gsl_vector *a)
     {
         double mod=0;
         for(int i=0;i<dim;i++)
@@ -50,7 +40,7 @@ class lyaExp
         }
         return sqrt(mod);
     }
-    double inner_product_vector(gsl_vector *a, gsl_vector *b)
+    double lyaExp::inner_product_vector(gsl_vector *a, gsl_vector *b)
     {
         double dprod=0;
         for(int i=0;i<dim;i++)
@@ -60,7 +50,7 @@ class lyaExp
         return dprod;
     }
 
-    void init(int d, int m, double ts=1.0)
+    void lyaExp::init(int d, int m, double ts)
     {
         dim=d;
         mode=m; 
@@ -72,18 +62,18 @@ class lyaExp
             LE[i]=0;
         }
     }
-    void cleanup()
+    void lyaExp::cleanup()
     {
         delete(LE);
     }
 
-    void getLyapunovSpectrum(double x[])
+    void lyaExp::getLyapunovSpectrum(double x[])
     {
         for(int i=0;i<dim;i++)
             x[i]=LE[i]/stepCounter;
     }
 
-    void update(gsl_vector *dx[])
+    void lyaExp::update(gsl_vector *dx[])
     {
         gsl_vector *v[dim], *u[dim];
 
@@ -131,7 +121,7 @@ class lyaExp
         /******************************/
         stepCounter++;
     }
-};
+
 
 void copy(gsl_vector *v, double V[], int dim)
 {
