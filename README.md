@@ -8,6 +8,7 @@ This library uses the GNU Scientific Library (GSL), specifically the vector impl
 **For Ubuntu and similar distros, use: sudo apt-get install gsl-bin libgsl0-dev**
 
 ## Usage
+Make sure you have the GSL Library installed and configured.
 
 * ### To build the library: 
 0. Please go through the sample code provided to learn how to use the library before proceeding.
