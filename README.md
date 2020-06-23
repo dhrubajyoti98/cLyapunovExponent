@@ -31,6 +31,7 @@ Make sure you have the GSL Library installed and configured.
     
 ## Authors & Contact 
 Dhrubajyoti Biswas, Contact: <dhrubajyoti98@gmail.com>
+
 Rahul Sundar, Contact: <rahul.sundar95@gmail.com>
 
 ## Other examples/features/functinalities to be added:
