@@ -1,3 +1,11 @@
+/*Filename: lyaExp.cpp.
+
+Contributing author: 
+Dhrubajyoti Biswas, dhrubajyoti98@gmail.com
+
+Implements the methods defined in lyaExp.hpp
+*/
+
 #include<cstdlib>
 #include<cmath>
 #include<cstdio>
@@ -8,7 +16,7 @@
 
     
 
-    
+    //scaling gsl vectors
     gsl_vector* lyaExp::scale_vector(gsl_vector *v, double factor)
     {
         gsl_vector* tmp=gsl_vector_calloc(dim);
@@ -31,6 +39,8 @@
         }
         return tmp;
     }
+
+    //modulus of vector
     double lyaExp::vector_mod(gsl_vector *a)
     {
         double mod=0;
@@ -40,6 +50,7 @@
         }
         return sqrt(mod);
     }
+    //simple inner product
     double lyaExp::inner_product_vector(gsl_vector *a, gsl_vector *b)
     {
         double dprod=0;
@@ -50,6 +61,7 @@
         return dprod;
     }
 
+    //initialization
     void lyaExp::init(int d, int m, double ts)
     {
         dim=d;
@@ -77,6 +89,7 @@
     {
         gsl_vector *v[dim], *u[dim];
 
+        //implementation of GSR
         for(int i=0;i<dim;i++)
         {
             v[i]=gsl_vector_calloc(dim);
