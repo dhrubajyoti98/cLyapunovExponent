@@ -37,6 +37,6 @@ Rahul Sundar, Contact: <rahul.sundar95@gmail.com>
 ## Other examples/features/functinalities to be added:
 - [ ] Sample codes for some simple maps and non-linear odes. (Example: Logistic, lorentz, forced duffing) 
 - [ ] Comments and cleaning up of the code base for user friendliness
-- [ ] Interfacing with the N Ode Solver
+- [ ] Interfacing with the N_ODE Solver
 - [ ] Orthonormalisation methods: householder transformation, givens rotation, cholesky decomposition, modified gram schmidt process.
 - [ ] Wolfe's algorithm for Lyapunov exponents if possible given just a time series
