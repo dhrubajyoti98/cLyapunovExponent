@@ -29,8 +29,9 @@ Make sure you have the GSL Library installed and configured.
 5. You should get two numbers on as your output on your display as follows:
     >0.60 -2.34
     
-## Author & Contact 
+## Authors & Contact 
 Dhrubajyoti Biswas, Contact: <dhrubajyoti98@gmail.com>
+Rahul Sundar, Contact: <rahul.sundar95@gmail.com>
 
 ## Other examples/features/functinalities to be added:
 - [ ] Sample codes for some simple maps and non-linear odes. (Example: Logistic, lorentz, forced duffing) 
