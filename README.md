@@ -1,3 +1,5 @@
+https://img.shields.io/github/repo-size/dhrubajyoti98/cLyapunovExponent
+
 # cLyapunovExponent
 A C++ library to calculate Lyapunov Spectrum of a Dynamical System using Gram-Schmidt Procedure.
 
